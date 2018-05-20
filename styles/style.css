@@ -1,0 +1,59 @@
+.control {
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+    font-size: 23px;
+    color: #686461;
+}
+
+.control input + label{
+    margin-left: 2%;
+}
+
+.control label {
+    position: relative;
+    bottom: 3px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    border-collapse: collapse;
+    color: #686461;
+    margin: 0 auto;
+}
+
+th {
+    border-bottom: 3px solid #B9B29F;
+    padding:10px 8px;
+    text-align: left;
+}
+
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background: white;
+} 
+
+tr:nth-child(even) {
+    background: #E8E6D1;
+}
+
+.loader {
+    width: 45px;
+    height: 45px;
+    margin: 10%;
+    background-image: url('../images/loading.png');
+    background-size: 100% 100%;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+    margin-top: 25%;
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+}
