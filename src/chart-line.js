@@ -2,7 +2,7 @@ export default function showChartLine(resultsData, puzzlesName) {
 let list = document.querySelectorAll("[type='checkbox']:checked"); 
 let dataForInput = [];
 let lineColor = ['red','green','pink','yellow','brown', 'purple', 'blue', 'orange','gray','black']
-    for (let i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length && i < 10; i++) {
         let item = {};
         item.label = resultsData[list[i].id].name;
         item.borderColor = lineColor.pop();
@@ -10,13 +10,13 @@ let lineColor = ['red','green','pink','yellow','brown', 'purple', 'blue', 'orang
         item.data = resultsData[list[i].id].times;
         dataForInput.push(item);
     }
-let popCanvas = document.getElementById("popChart");
+
+document.querySelector('.line-chart').innerHTML='';
+let popCanvas = document.createElement('canvas');
+document.querySelector('.line-chart').appendChild(popCanvas);
 popCanvas.style.display="block";
 popCanvas.getContext("2d");
-document.querySelector('body').removeChild(popCanvas);
 
-// popCanvas.innerHTML = ''; 
-// if(barChart) barChart.update();
 let barChart = new Chart(popCanvas, {
     type: 'line',
     data: {
