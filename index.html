@@ -8,14 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id="popChart"></canvas>
     <section class="control">
         <label for="0">RsSchool</label>
-        <input type="radio" name="session" id="0">
+        <input type="radio" name="session" id="0" checked>
         <label for="1">RsSchool-demo</label>
         <input type="radio" name="session" id="1">
+        <button>Show Chart Line</button>
     </section>
     <section class="info"></section>
     <div class="loader"></div>
-    <script src="./main.js"></script>    
+    <script src="./node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="./build.js"></script>    
 </body>
 </html>
