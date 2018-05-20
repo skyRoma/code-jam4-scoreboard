@@ -12,6 +12,7 @@ function showTable(users,sessions){
     if (target.tagName != 'LABEL' && target.tagName != 'INPUT') return;
     document.querySelector('.info').innerHTML='';
     resultsData=[];
+    puzzlesName=[];
     const checkedButton = target;
     switcher = +checkedButton.id;
     }
