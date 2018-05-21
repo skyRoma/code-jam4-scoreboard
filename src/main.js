@@ -69,8 +69,6 @@ function showTable(users,sessions){
     document.querySelector('.info').appendChild(table);
 };
 
-
-
 async function showResults(){
     const usersUrl="https://cors.io/?https://drive.google.com/uc?export=download&id=1QsO2d1BNYZ5m8YlY35qD_VUJIRnz5drO";
     const sessionsUrl="https://cors.io/?https://drive.google.com/uc?export=download&id=1Rnc8OIYlsSKo7-nOTzodi6LdX3bXdc-9";
@@ -82,10 +80,7 @@ async function showResults(){
             let sessions= await sessionsResponse.json();
             document.querySelector('.loader').style.display='none'; 
             document.querySelector('.control').style.display='flex'; 
-            // console.log(users);
-            // console.log(sessions);
             showTable(users,sessions);
-
             controlSection.addEventListener('click', ()=>{showTable(users,sessions)});
         }
     }
@@ -94,9 +89,3 @@ async function showResults(){
     }
 }
 showResults();  
-
-// xhr.open("GET", "https://cors.io/?https://drive.google.com/uc?export=download&id=1kphEq-khAK9mWcuekP37PakuW1dGY58i", true);
-// xhr.open("GET", "https://cors.io/?https://drive.google.com/uc?export=download&id=11vHQu_qJIfvY4tJYC9mRobtbSj8sbhet", true);
-
-// xhr.open("GET", "https://cors.io/?https://drive.google.com/uc?export=download&id=1QsO2d1BNYZ5m8YlY35qD_VUJIRnz5drO", true);
-// xhr.send();
